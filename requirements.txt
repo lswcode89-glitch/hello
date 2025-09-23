@@ -1,2 +1,2 @@
-playwright==1.37.1
+playwright
 requests
