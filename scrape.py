@@ -38,8 +38,8 @@ PCT_RE = re.compile(r"(-?\d+(?:\.\d+)?)\s*%")
 # ---------------------------
 
 def send_telegram_message(text):
-    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    payload = {"chat_id": TELEGRAM_CHAT_ID, "text": text}
+    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    payload = {"chat_id": CHAT_ID, "text": text}
     try:
         r = requests.post(url, json=payload, timeout=10)
         r.raise_for_status()
@@ -159,7 +159,7 @@ async def main():
 # ---------------------------
 async def main_loop():
     while True:
-        await scrape_and_alert()
+        await main()
         await asyncio.sleep(60)
 
 if __name__ == "__main__":
