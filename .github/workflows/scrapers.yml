@@ -1,3 +1,11 @@
+name: xs
+
+on:
+  schedule:
+    # every 5 minutes
+    - cron: "*/1 * * * *"
+  workflow_dispatch: # allows manual trigger
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
