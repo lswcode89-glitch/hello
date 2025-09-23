@@ -19,7 +19,7 @@ X_SOL_SELECTOR = "div:contains('xSOL')"
 APY_SELECTOR = ".FixedAPY, .fixed-apy, .apy, div.apy"  # example classes, update as needed
 
 # Threshold for alert (percentage points)
-THRESHOLD = 0.5  # e.g. alert if differ by ≥ 1%
+THRESHOLD = 3  # e.g. alert if differ by ≥ 1%
 
 # Telegram bot config
 #BOT_TOKEN = os.environ['TELEGRAM_TOKEN']
