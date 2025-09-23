@@ -1,1 +1,1 @@
-web: python scrape.py
+web: bash setup.sh

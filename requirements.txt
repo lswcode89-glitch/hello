@@ -1,2 +1,2 @@
-playwright
+playwright==1.37.1
 requests

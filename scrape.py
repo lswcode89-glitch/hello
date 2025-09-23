@@ -157,10 +157,6 @@ async def main():
 # ---------------------------
 # Run every minute
 # ---------------------------
-async def main_loop():
-    while True:
-        await main()
-        await asyncio.sleep(60)
 
 if __name__ == "__main__":
-    asyncio.run(main_loop())
+    asyncio.run(main())
