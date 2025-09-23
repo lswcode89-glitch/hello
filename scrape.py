@@ -22,8 +22,8 @@ APY_SELECTOR = ".FixedAPY, .fixed-apy, .apy, div.apy"  # example classes, update
 THRESHOLD = 1.0  # e.g. alert if differ by ≥ 1%
 
 # Telegram bot config
-TELEGRAM_BOT_TOKEN = os.environ['TELEGRAM_TOKEN']
-TELEGRAM_CHAT_ID = "@lswcoinm"
+BOT_TOKEN = os.environ['TELEGRAM_TOKEN']
+CHAT_ID = "@lswcoinm"
 
 
 # How many attempts to wait for the dynamic content before giving up
@@ -154,5 +154,13 @@ async def main():
     else:
         print("Difference below threshold; no alert.")
 
+# ---------------------------
+# Run every minute
+# ---------------------------
+async def main_loop():
+    while True:
+        await scrape_and_alert()
+        await asyncio.sleep(60)
+
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main_loop())
