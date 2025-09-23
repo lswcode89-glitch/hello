@@ -3,7 +3,7 @@ name: xs
 on:
   schedule:
     # every 5 minutes
-    - cron: "*/1 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch: # allows manual trigger
 
 jobs:
